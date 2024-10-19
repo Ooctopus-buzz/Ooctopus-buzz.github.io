@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+    <title>Ooctopus İşletim Sistemi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            border: none;
+            outline: none;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            overflow-x: hidden;
+            background-color: black;
+            color: white;
+        }
+
+        header {
+            margin-top: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1rem 9%;
+            background-color: transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 3rem;
+            color: #FFA500; /* Turuncu */
+            font-weight: 800;
+            cursor: pointer;
+            transition: 0.5s ease;
+        }
+
+        nav a {
+            font-size: 1.8rem;
+            color: white;
+            margin-left: 4rem;
+            font-weight: 500;
+            transition: 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #FFA500; /* Turuncu */
+        }
+
+        section {
+            min-height: 200vh; /* Daha fazla alan için yüksekliği artırdık */
+            padding: 5rem 9%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            position: relative;
+            margin-top: 100px; /* Üstten boşluk */
+        }
+
+        .title {
+            font-size: 4rem;
+            color: #FFA500; /* Turuncu */
+            font-weight: 700;
+            margin-bottom: 2rem;
+            text-align: center; /* Merkeze hizala */
+        }
+
+        .description {
+            font-size: 1.6rem;
+            color: #FFA500; /* Turuncu */
+            margin-bottom: 2rem;
+            text-align: center; /* Merkeze hizala */
+        }
+
+        .background-image {
+            position: relative;
+            width: 100%;
+            height: 300px; /* Görsel için alan */
+            background-image: url('https://cdn.kde.org/graphics/plasma/desktop/plasma-desktop.jpg'); /* KDE Plasma arka plan resmi */
+            background-size: cover;
+            border-radius: 1rem;
+            margin-top: 20px; /* Üstteki alan için boşluk */
+            display: flex; /* Butonu merkezlemek için flex kullan */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .overlay-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('display.jpg'); /* İndir butonunun üstüne koyulacak görsel */
+            background-size: cover;
+            opacity: 0.8; /* Şeffaflık */
+            z-index: 1; /* Arka planda */
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.8rem;
+            background-color: black;
+            border-radius: 4rem;
+            font-size: 1.6rem;
+            color: #FFA500; /* Turuncu */
+            letter-spacing: 0.3rem;
+            font-weight: 600;
+            border: 2px solid #FFA500; /* Turuncu */
+            transition: 0.3s ease;
+            cursor: pointer;
+            position: relative; /* Butonu üstte konumlandır */
+            z-index: 2; /* Butonu önde tut */
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+            background-color: #FFA500; /* Turuncu */
+            color: black;
+            box-shadow: 0 0 25px #FFA500; /* Turuncu */
+        }
+
+        .info {
+            padding: 20px;
+            text-align: justify;
+            color: #FFA500; /* Turuncu */
+            font-size: 1.8rem; /* Yazı boyutunu büyüttük */
+            margin-top: 20px; /* Boşluk ekledik */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="https://ooctopus-buzz.github.io/#" class="logo">Ooctopus</a> <!-- Ana sayfa bağlantısı -->
+        <nav>
+            <a href="https://ooctopus-buzz.github.io/#">Ana Sayfa</a> <!-- Ana sayfa bağlantısı -->
+            <a href="#">Servisler</a>
+            <a href="#" class="active">İşletim Sistemi</a>
+            <a href="#">Öğrenme</a>
+            <a href="#">Ürünler</a>
+            <a href="#">İletişim</a>
+        </nav>
+    </header>
+    <section>
+        <h1 class="title">Ooctopus İşletim Sistemi</h1>
+        <p class="description">Ooctopus, açık kaynaklı ve Arch tabanlı bir işletim sistemidir. KDE Plasma ile güçlü, esnek ve kullanıcı dostu bir deneyim sunar.</p>
+
+        <div class="background-image">
+            <div class="overlay-image"></div>
+            <a href="https://www.google.com" target="_blank" class="btn">İndir</a> <!-- Google'a yönlendirme -->
+        </div>
+
+        <div class="info">
+            <p>Ooctopus, modern yazılım geliştirme gereksinimlerini karşılamak için tasarlanmış, kullanıcı dostu bir arayüz sunan, yüksek performanslı bir işletim sistemidir. Arch tabanlı olması sayesinde, sistemin güncel kalması ve geniş bir yazılım yelpazesine erişim sağlanması mümkündür.</p>
+            <p>Ooctopus, kullanıcılarının ihtiyaçlarına cevap vermek için sürekli güncellenmektedir. Özgür yazılım felsefesi doğrultusunda, herkesin katkıda bulunabileceği bir proje olarak, sürekli gelişmeye ve yeni özellikler eklemeye devam etmektedir. Özgür ve açık kaynaklı bir sistem arıyorsanız, Ooctopus sizin için mükemmel bir seçimdir!</p>
+        </div>
+    </section>
+</body>
+</html>
